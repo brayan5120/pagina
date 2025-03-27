@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(170, 208, 237);
+
+}
+.menuCSS3 ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menuCSS3 a {
+    display: block;
+    padding: 1em 11em; /* Ajuste del padding */
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.menuCSS3 a:hover {
+    background-color: #8d9edd;
+}
+
+.menuCSS3 ul li {
+    position: relative; /* Necesario para el submenú */
+}
+
+.menuCSS3 ul li ul {
+    display: none;
+    width: 430px;
+    position: absolute; /* Posiciona el submenú */
+    top: 100%; /* Muestra el submenú debajo del elemento padre */
+    left: 0;
+    padding: 0; /* Elimina padding del submenú */
+    margin: 0;
+    list-style: none;
+    background-color: #F9B53C; /* Color de fondo del submenú */
+}
+
+.menuCSS3 ul li:hover ul {
+    display: block; /* Muestra el submenú al pasar el mouse */
+}
+
+.menuCSS3 ul li ul li a {
+    padding: 1em;} /* Ajusta el padding para los elementos*/
+
+@media (max-width: 900px) {
+    .menuCSS3 ul {
+        flex-direction: column;
+    }
+
+    .menuCSS3 ul li {
+        width: 100%;
+    }
+
+    .menuCSS3 a {
+        padding: 1em;
+        text-align: center;
+    }
+
+    .menuCSS3 ul li ul {
+        position: static;
+        display: none;
+    }
+
+    .menuCSS3 ul li:hover ul {
+        display: block;
+
+    }
+}
